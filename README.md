@@ -12,7 +12,9 @@
 ## Directory structure
 
 ```txt
-|-- Reference                   # 官方提供的参考资料
+|-- Reference                   # 参考资料
+    |-- Individual              # 个人整理的资料
+    |-- Official                # 官方提供的参考资料
 |-- Template                    # 项目工程
     |-- Core                    # 核心层
     |-- Drivers                 # 驱动层
@@ -20,6 +22,7 @@
     |-- MyApplication           # 应用层
     |-- Template-Cubex          # CubeMX 工程文件
     |-- keilkill.bat            # 批处理文件
+    |-- Teamplate.zip           # 项目工程压缩文件
 |-- Tools                       # 工具软件
 ```
 

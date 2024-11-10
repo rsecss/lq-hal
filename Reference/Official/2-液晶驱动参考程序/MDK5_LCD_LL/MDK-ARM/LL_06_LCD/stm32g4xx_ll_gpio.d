@@ -1,0 +1,12 @@
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Include/core_cm4.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Include/cmsis_version.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h
+ll_06_lcd\stm32g4xx_ll_gpio.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h

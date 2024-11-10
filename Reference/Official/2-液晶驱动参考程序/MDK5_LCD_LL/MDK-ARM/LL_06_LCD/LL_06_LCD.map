@@ -1,0 +1,616 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.MX_GPIO_Init) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(i.MX_GPIO_Init) refers to main.o(i.LL_AHB2_GRP1_EnableClock) for LL_AHB2_GRP1_EnableClock
+    main.o(i.MX_GPIO_Init) refers to stm32g4xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    main.o(i.SystemClock_Config) refers to stm32g4xx_ll_utils.o(i.LL_Init1msTick) for LL_Init1msTick
+    main.o(i.SystemClock_Config) refers to stm32g4xx_ll_utils.o(i.LL_SetSystemCoreClock) for LL_SetSystemCoreClock
+    main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
+    main.o(i.main) refers to main.o(i.MX_GPIO_Init) for MX_GPIO_Init
+    main.o(i.main) refers to lcd.o(i.LCD_Init) for LCD_Init
+    main.o(i.main) refers to lcd.o(i.LCD_Clear) for LCD_Clear
+    main.o(i.main) refers to lcd.o(i.LCD_SetBackColor) for LCD_SetBackColor
+    main.o(i.main) refers to lcd.o(i.LCD_SetTextColor) for LCD_SetTextColor
+    main.o(i.main) refers to lcd.o(i.LCD_DrawLine) for LCD_DrawLine
+    main.o(i.main) refers to stm32g4xx_ll_utils.o(i.LL_mDelay) for LL_mDelay
+    main.o(i.main) refers to lcd.o(i.LCD_DrawRect) for LCD_DrawRect
+    main.o(i.main) refers to lcd.o(i.LCD_DrawCircle) for LCD_DrawCircle
+    main.o(i.main) refers to lcd.o(i.LCD_DisplayStringLine) for LCD_DisplayStringLine
+    startup_stm32g431xx.o(RESET) refers to startup_stm32g431xx.o(STACK) for __initial_sp
+    startup_stm32g431xx.o(RESET) refers to startup_stm32g431xx.o(.text) for Reset_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32g431xx.o(RESET) refers to stm32g4xx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32g431xx.o(.text) refers to system_stm32g4xx.o(i.SystemInit) for SystemInit
+    startup_stm32g431xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    lcd.o(i.LCD_BusIn) refers to memseta.o(.text) for __aeabi_memclr4
+    lcd.o(i.LCD_BusIn) refers to stm32g4xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    lcd.o(i.LCD_BusOut) refers to memseta.o(.text) for __aeabi_memclr4
+    lcd.o(i.LCD_BusOut) refers to stm32g4xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    lcd.o(i.LCD_Clear) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_Clear) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_Clear) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_ClearLine) refers to lcd.o(i.LCD_DisplayStringLine) for LCD_DisplayStringLine
+    lcd.o(i.LCD_CtrlLinesConfig) refers to memseta.o(.text) for __aeabi_memclr4
+    lcd.o(i.LCD_CtrlLinesConfig) refers to lcd.o(i.LL_AHB2_GRP1_EnableClock) for LL_AHB2_GRP1_EnableClock
+    lcd.o(i.LCD_CtrlLinesConfig) refers to stm32g4xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    lcd.o(i.LCD_CtrlLinesConfig) refers to lcd.o(i.LCD_BusOut) for LCD_BusOut
+    lcd.o(i.LCD_DisplayChar) refers to lcd.o(i.LCD_DrawChar) for LCD_DrawChar
+    lcd.o(i.LCD_DisplayChar) refers to lcd.o(.constdata) for .constdata
+    lcd.o(i.LCD_DisplayOff) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_DisplayOn) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_DisplayStringLine) refers to lcd.o(i.LCD_DisplayChar) for LCD_DisplayChar
+    lcd.o(i.LCD_DrawChar) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_DrawChar) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_DrawChar) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_DrawChar) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_DrawCircle) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_DrawCircle) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_DrawCircle) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_DrawCircle) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_DrawLine) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_DrawLine) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_DrawLine) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_DrawLine) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_DrawMonoPict) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_DrawMonoPict) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_DrawMonoPict) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_DrawMonoPict) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_DrawPicture) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_DrawPicture) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_DrawPicture) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.LCD_DrawRect) refers to lcd.o(i.LCD_DrawLine) for LCD_DrawLine
+    lcd.o(i.LCD_Init) refers to lcd.o(i.LCD_CtrlLinesConfig) for LCD_CtrlLinesConfig
+    lcd.o(i.LCD_Init) refers to lcd.o(i.LCD_ReadReg) for LCD_ReadReg
+    lcd.o(i.LCD_Init) refers to lcd.o(i.REG_932X_Init) for REG_932X_Init
+    lcd.o(i.LCD_Init) refers to lcd.o(i.REG_8230_Init) for REG_8230_Init
+    lcd.o(i.LCD_Init) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_PowerOn) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_PowerOn) refers to lcd.o(i.Delay_LCD) for Delay_LCD
+    lcd.o(i.LCD_ReadRAM) refers to lcd.o(i.LCD_BusIn) for LCD_BusIn
+    lcd.o(i.LCD_ReadRAM) refers to lcd.o(i.LCD_BusOut) for LCD_BusOut
+    lcd.o(i.LCD_ReadReg) refers to lcd.o(i.LCD_BusIn) for LCD_BusIn
+    lcd.o(i.LCD_ReadReg) refers to lcd.o(i.LCD_BusOut) for LCD_BusOut
+    lcd.o(i.LCD_SetBackColor) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_SetCursor) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_SetDisplayWindow) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_SetDisplayWindow) refers to lcd.o(i.LCD_SetCursor) for LCD_SetCursor
+    lcd.o(i.LCD_SetTextColor) refers to lcd.o(.data) for .data
+    lcd.o(i.LCD_WindowModeDisable) refers to lcd.o(i.LCD_SetDisplayWindow) for LCD_SetDisplayWindow
+    lcd.o(i.LCD_WindowModeDisable) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_WriteBMP) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.LCD_WriteBMP) refers to lcd.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    lcd.o(i.LCD_WriteBMP) refers to lcd.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    lcd.o(i.REG_8230_Init) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.REG_8230_Init) refers to lcd.o(i.Delay_LCD) for Delay_LCD
+    lcd.o(i.REG_932X_Init) refers to lcd.o(i.LCD_WriteReg) for LCD_WriteReg
+    lcd.o(i.REG_932X_Init) refers to stm32g4xx_ll_utils.o(i.LL_mDelay) for LL_mDelay
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.UTILS_PLL_IsBusy) for UTILS_PLL_IsBusy
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.UTILS_GetPLLOutputFrequency) for UTILS_GetPLLOutputFrequency
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.LL_RCC_PLL_ConfigDomain_SYS) for LL_RCC_PLL_ConfigDomain_SYS
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) for UTILS_EnablePLLAndSwitchSystem
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.LL_SetFlashLatency) for LL_SetFlashLatency
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to stm32g4xx_ll_utils.o(i.LL_RCC_SetAHBPrescaler) for LL_RCC_SetAHBPrescaler
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE) refers to system_stm32g4xx.o(.data) for SystemCoreClock
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.UTILS_PLL_IsBusy) for UTILS_PLL_IsBusy
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.UTILS_GetPLLOutputFrequency) for UTILS_GetPLLOutputFrequency
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.LL_RCC_PLL_ConfigDomain_SYS) for LL_RCC_PLL_ConfigDomain_SYS
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) for UTILS_EnablePLLAndSwitchSystem
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.LL_SetFlashLatency) for LL_SetFlashLatency
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to stm32g4xx_ll_utils.o(i.LL_RCC_SetAHBPrescaler) for LL_RCC_SetAHBPrescaler
+    stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI) refers to system_stm32g4xx.o(.data) for SystemCoreClock
+    stm32g4xx_ll_utils.o(i.LL_SetSystemCoreClock) refers to system_stm32g4xx.o(.data) for SystemCoreClock
+    stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) refers to stm32g4xx_ll_utils.o(i.LL_SetFlashLatency) for LL_SetFlashLatency
+    stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) refers to stm32g4xx_ll_utils.o(i.LL_RCC_SetAHBPrescaler) for LL_RCC_SetAHBPrescaler
+    stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) refers to system_stm32g4xx.o(.constdata) for AHBPrescTable
+    stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem) refers to system_stm32g4xx.o(.data) for SystemCoreClock
+    stm32g4xx_ll_gpio.o(i.LL_GPIO_DeInit) refers to stm32g4xx_ll_gpio.o(i.LL_AHB2_GRP1_ForceReset) for LL_AHB2_GRP1_ForceReset
+    stm32g4xx_ll_gpio.o(i.LL_GPIO_DeInit) refers to stm32g4xx_ll_gpio.o(i.LL_AHB2_GRP1_ReleaseReset) for LL_AHB2_GRP1_ReleaseReset
+    system_stm32g4xx.o(i.SystemCoreClockUpdate) refers to system_stm32g4xx.o(.data) for .data
+    system_stm32g4xx.o(i.SystemCoreClockUpdate) refers to system_stm32g4xx.o(.constdata) for .constdata
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32g431xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32g431xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing main.o(i.Error_Handler), (2 bytes).
+    Removing stm32g4xx_it.o(.rev16_text), (4 bytes).
+    Removing stm32g4xx_it.o(.revsh_text), (4 bytes).
+    Removing stm32g4xx_it.o(.rrx_text), (6 bytes).
+    Removing startup_stm32g431xx.o(HEAP), (512 bytes).
+    Removing lcd.o(.rev16_text), (4 bytes).
+    Removing lcd.o(.revsh_text), (4 bytes).
+    Removing lcd.o(.rrx_text), (6 bytes).
+    Removing lcd.o(i.LCD_ClearLine), (32 bytes).
+    Removing lcd.o(i.LCD_DisplayOff), (8 bytes).
+    Removing lcd.o(i.LCD_DisplayOn), (10 bytes).
+    Removing lcd.o(i.LCD_DrawMonoPict), (76 bytes).
+    Removing lcd.o(i.LCD_DrawPicture), (42 bytes).
+    Removing lcd.o(i.LCD_PowerOn), (120 bytes).
+    Removing lcd.o(i.LCD_ReadRAM), (132 bytes).
+    Removing lcd.o(i.LCD_SetDisplayWindow), (76 bytes).
+    Removing lcd.o(i.LCD_WindowModeDisable), (30 bytes).
+    Removing lcd.o(i.LCD_WriteBMP), (70 bytes).
+    Removing stm32g4xx_ll_utils.o(.rev16_text), (4 bytes).
+    Removing stm32g4xx_ll_utils.o(.revsh_text), (4 bytes).
+    Removing stm32g4xx_ll_utils.o(.rrx_text), (6 bytes).
+    Removing stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSE), (164 bytes).
+    Removing stm32g4xx_ll_utils.o(i.LL_PLL_ConfigSystemClock_HSI), (144 bytes).
+    Removing stm32g4xx_ll_utils.o(i.LL_RCC_PLL_ConfigDomain_SYS), (32 bytes).
+    Removing stm32g4xx_ll_utils.o(i.LL_RCC_SetAHBPrescaler), (20 bytes).
+    Removing stm32g4xx_ll_utils.o(i.LL_SetFlashLatency), (208 bytes).
+    Removing stm32g4xx_ll_utils.o(i.UTILS_EnablePLLAndSwitchSystem), (164 bytes).
+    Removing stm32g4xx_ll_utils.o(i.UTILS_GetPLLOutputFrequency), (34 bytes).
+    Removing stm32g4xx_ll_utils.o(i.UTILS_PLL_IsBusy), (24 bytes).
+    Removing stm32g4xx_ll_exti.o(.rev16_text), (4 bytes).
+    Removing stm32g4xx_ll_exti.o(.revsh_text), (4 bytes).
+    Removing stm32g4xx_ll_exti.o(.rrx_text), (6 bytes).
+    Removing stm32g4xx_ll_exti.o(i.LL_EXTI_DeInit), (80 bytes).
+    Removing stm32g4xx_ll_exti.o(i.LL_EXTI_Init), (324 bytes).
+    Removing stm32g4xx_ll_exti.o(i.LL_EXTI_StructInit), (16 bytes).
+    Removing stm32g4xx_ll_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32g4xx_ll_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32g4xx_ll_gpio.o(.rrx_text), (6 bytes).
+    Removing stm32g4xx_ll_gpio.o(i.LL_AHB2_GRP1_ForceReset), (16 bytes).
+    Removing stm32g4xx_ll_gpio.o(i.LL_AHB2_GRP1_ReleaseReset), (16 bytes).
+    Removing stm32g4xx_ll_gpio.o(i.LL_GPIO_DeInit), (152 bytes).
+    Removing stm32g4xx_ll_gpio.o(i.LL_GPIO_StructInit), (22 bytes).
+    Removing stm32g4xx_ll_pwr.o(.rev16_text), (4 bytes).
+    Removing stm32g4xx_ll_pwr.o(.revsh_text), (4 bytes).
+    Removing stm32g4xx_ll_pwr.o(.rrx_text), (6 bytes).
+    Removing stm32g4xx_ll_pwr.o(i.LL_PWR_DeInit), (28 bytes).
+    Removing system_stm32g4xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32g4xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32g4xx.o(.rrx_text), (6 bytes).
+    Removing system_stm32g4xx.o(i.SystemCoreClockUpdate), (128 bytes).
+    Removing system_stm32g4xx.o(.constdata), (16 bytes).
+    Removing system_stm32g4xx.o(.constdata), (8 bytes).
+
+55 unused section(s) (total 2818 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c 0x00000000   Number         0  stm32g4xx_ll_exti.o ABSOLUTE
+    ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c 0x00000000   Number         0  stm32g4xx_ll_gpio.o ABSOLUTE
+    ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c 0x00000000   Number         0  stm32g4xx_ll_pwr.o ABSOLUTE
+    ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c 0x00000000   Number         0  stm32g4xx_ll_utils.o ABSOLUTE
+    ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ../Src/stm32g4xx_it.c                    0x00000000   Number         0  stm32g4xx_it.o ABSOLUTE
+    ../Src/system_stm32g4xx.c                0x00000000   Number         0  system_stm32g4xx.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ..\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_exti.c 0x00000000   Number         0  stm32g4xx_ll_exti.o ABSOLUTE
+    ..\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_gpio.c 0x00000000   Number         0  stm32g4xx_ll_gpio.o ABSOLUTE
+    ..\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_pwr.c 0x00000000   Number         0  stm32g4xx_ll_pwr.o ABSOLUTE
+    ..\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_utils.c 0x00000000   Number         0  stm32g4xx_ll_utils.o ABSOLUTE
+    ..\Src\lcd.c                             0x00000000   Number         0  lcd.o ABSOLUTE
+    ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ..\Src\stm32g4xx_it.c                    0x00000000   Number         0  stm32g4xx_it.o ABSOLUTE
+    ..\Src\system_stm32g4xx.c                0x00000000   Number         0  system_stm32g4xx.o ABSOLUTE
+    ..\\Src\\lcd.c                           0x00000000   Number         0  lcd.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_stm32g431xx.s                    0x00000000   Number         0  startup_stm32g431xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      472  startup_stm32g431xx.o(RESET)
+    .ARM.Collect$$$$00000000                 0x080001d8   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x080001d8   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x080001dc   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x080001e0   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x080001e0   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x080001e0   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x080001e8   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x080001e8   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x080001e8   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x080001e8   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x080001ec   Section       36  startup_stm32g431xx.o(.text)
+    $v0                                      0x080001ec   Number         0  startup_stm32g431xx.o(.text)
+    .text                                    0x08000210   Section        0  memseta.o(.text)
+    .text                                    0x08000234   Section       36  init.o(.text)
+    i.BusFault_Handler                       0x08000258   Section        0  stm32g4xx_it.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x0800025a   Section        0  stm32g4xx_it.o(i.DebugMon_Handler)
+    i.Delay_LCD                              0x0800025c   Section        0  lcd.o(i.Delay_LCD)
+    i.HardFault_Handler                      0x08000278   Section        0  stm32g4xx_it.o(i.HardFault_Handler)
+    i.LCD_BusIn                              0x0800027c   Section        0  lcd.o(i.LCD_BusIn)
+    i.LCD_BusOut                             0x080002a8   Section        0  lcd.o(i.LCD_BusOut)
+    i.LCD_Clear                              0x080002d8   Section        0  lcd.o(i.LCD_Clear)
+    i.LCD_CtrlLinesConfig                    0x080002fc   Section        0  lcd.o(i.LCD_CtrlLinesConfig)
+    i.LCD_DisplayChar                        0x0800036c   Section        0  lcd.o(i.LCD_DisplayChar)
+    i.LCD_DisplayStringLine                  0x08000384   Section        0  lcd.o(i.LCD_DisplayStringLine)
+    i.LCD_DrawChar                           0x080003b0   Section        0  lcd.o(i.LCD_DrawChar)
+    i.LCD_DrawCircle                         0x08000408   Section        0  lcd.o(i.LCD_DrawCircle)
+    i.LCD_DrawLine                           0x08000514   Section        0  lcd.o(i.LCD_DrawLine)
+    i.LCD_DrawRect                           0x08000568   Section        0  lcd.o(i.LCD_DrawRect)
+    i.LCD_Init                               0x080005a8   Section        0  lcd.o(i.LCD_Init)
+    i.LCD_ReadReg                            0x080005dc   Section        0  lcd.o(i.LCD_ReadReg)
+    i.LCD_SetBackColor                       0x0800065c   Section        0  lcd.o(i.LCD_SetBackColor)
+    i.LCD_SetCursor                          0x0800066c   Section        0  lcd.o(i.LCD_SetCursor)
+    i.LCD_SetTextColor                       0x08000684   Section        0  lcd.o(i.LCD_SetTextColor)
+    i.LCD_WriteRAM                           0x08000694   Section        0  lcd.o(i.LCD_WriteRAM)
+    i.LCD_WriteRAM_Prepare                   0x080006ec   Section        0  lcd.o(i.LCD_WriteRAM_Prepare)
+    i.LCD_WriteReg                           0x08000748   Section        0  lcd.o(i.LCD_WriteReg)
+    i.LL_AHB2_GRP1_EnableClock               0x080007b4   Section        0  main.o(i.LL_AHB2_GRP1_EnableClock)
+    LL_AHB2_GRP1_EnableClock                 0x080007b5   Thumb Code    18  main.o(i.LL_AHB2_GRP1_EnableClock)
+    i.LL_AHB2_GRP1_EnableClock               0x080007cc   Section        0  lcd.o(i.LL_AHB2_GRP1_EnableClock)
+    LL_AHB2_GRP1_EnableClock                 0x080007cd   Thumb Code    18  lcd.o(i.LL_AHB2_GRP1_EnableClock)
+    i.LL_GPIO_Init                           0x080007e4   Section        0  stm32g4xx_ll_gpio.o(i.LL_GPIO_Init)
+    i.LL_Init1msTick                         0x08000916   Section        0  stm32g4xx_ll_utils.o(i.LL_Init1msTick)
+    i.LL_SetSystemCoreClock                  0x08000930   Section        0  stm32g4xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    i.LL_mDelay                              0x0800093c   Section        0  stm32g4xx_ll_utils.o(i.LL_mDelay)
+    i.MX_GPIO_Init                           0x0800095c   Section        0  main.o(i.MX_GPIO_Init)
+    MX_GPIO_Init                             0x0800095d   Thumb Code   548  main.o(i.MX_GPIO_Init)
+    i.MemManage_Handler                      0x08000b88   Section        0  stm32g4xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08000b8a   Section        0  stm32g4xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x08000b8c   Section        0  stm32g4xx_it.o(i.PendSV_Handler)
+    i.REG_8230_Init                          0x08000b8e   Section        0  lcd.o(i.REG_8230_Init)
+    i.REG_932X_Init                          0x08000ca0   Section        0  lcd.o(i.REG_932X_Init)
+    i.SVC_Handler                            0x08000ea2   Section        0  stm32g4xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08000ea4   Section        0  stm32g4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08000ea8   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08000f60   Section        0  system_stm32g4xx.o(i.SystemInit)
+    i.UsageFault_Handler                     0x08000f7c   Section        0  stm32g4xx_it.o(i.UsageFault_Handler)
+    i.__scatterload_copy                     0x08000f7e   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000f8c   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000f8e   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x08000f9c   Section        0  main.o(i.main)
+    .constdata                               0x0800113c   Section     4560  lcd.o(.constdata)
+    .data                                    0x20000000   Section        6  lcd.o(.data)
+    TextColor                                0x20000000   Data           2  lcd.o(.data)
+    BackColor                                0x20000002   Data           2  lcd.o(.data)
+    .data                                    0x20000008   Section        4  system_stm32g4xx.o(.data)
+    STACK                                    0x20000010   Section     1024  startup_stm32g431xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000001d8   Number         0  startup_stm32g431xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32g431xx.o(RESET)
+    __Vectors_End                            0x080001d8   Data           0  startup_stm32g431xx.o(RESET)
+    __main                                   0x080001d9   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x080001d9   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x080001dd   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x080001e1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x080001e1   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x080001e1   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x080001e1   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x080001e9   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x080001e9   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x080001ed   Thumb Code     8  startup_stm32g431xx.o(.text)
+    ADC1_2_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    COMP1_2_3_IRQHandler                     0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    COMP4_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    CORDIC_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    CRS_IRQHandler                           0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel1_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel2_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel3_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel4_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel5_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMA2_Channel6_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    DMAMUX_OVR_IRQHandler                    0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI0_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI15_10_IRQHandler                     0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI1_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI2_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI3_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI4_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    EXTI9_5_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    FDCAN1_IT0_IRQHandler                    0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    FDCAN1_IT1_IRQHandler                    0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    FLASH_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    FMAC_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    FPU_IRQHandler                           0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C1_ER_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C1_EV_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C2_ER_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C2_EV_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C3_ER_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    I2C3_EV_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    LPTIM1_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    LPUART1_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    PVD_PVM_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    RCC_IRQHandler                           0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    RNG_IRQHandler                           0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    RTC_Alarm_IRQHandler                     0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    RTC_TAMP_LSECSS_IRQHandler               0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    RTC_WKUP_IRQHandler                      0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    SAI1_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    SPI1_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    SPI2_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    SPI3_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM1_BRK_TIM15_IRQHandler                0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM1_CC_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM1_TRG_COM_TIM17_IRQHandler            0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM1_UP_TIM16_IRQHandler                 0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM2_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM3_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM4_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM6_DAC_IRQHandler                      0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM7_DAC_IRQHandler                      0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM8_BRK_IRQHandler                      0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM8_CC_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    TIM8_UP_IRQHandler                       0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    UART4_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    UCPD1_IRQHandler                         0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USART1_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USART2_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USART3_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USBWakeUp_IRQHandler                     0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USB_HP_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    USB_LP_IRQHandler                        0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    WWDG_IRQHandler                          0x08000207   Thumb Code     0  startup_stm32g431xx.o(.text)
+    __aeabi_memset                           0x08000211   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000211   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000211   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0800021f   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0800021f   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0800021f   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x08000223   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x08000235   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x08000235   Thumb Code     0  init.o(.text)
+    BusFault_Handler                         0x08000259   Thumb Code     2  stm32g4xx_it.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x0800025b   Thumb Code     2  stm32g4xx_it.o(i.DebugMon_Handler)
+    Delay_LCD                                0x0800025d   Thumb Code    28  lcd.o(i.Delay_LCD)
+    HardFault_Handler                        0x08000279   Thumb Code     2  stm32g4xx_it.o(i.HardFault_Handler)
+    LCD_BusIn                                0x0800027d   Thumb Code    40  lcd.o(i.LCD_BusIn)
+    LCD_BusOut                               0x080002a9   Thumb Code    44  lcd.o(i.LCD_BusOut)
+    LCD_Clear                                0x080002d9   Thumb Code    36  lcd.o(i.LCD_Clear)
+    LCD_CtrlLinesConfig                      0x080002fd   Thumb Code   108  lcd.o(i.LCD_CtrlLinesConfig)
+    LCD_DisplayChar                          0x0800036d   Thumb Code    18  lcd.o(i.LCD_DisplayChar)
+    LCD_DisplayStringLine                    0x08000385   Thumb Code    42  lcd.o(i.LCD_DisplayStringLine)
+    LCD_DrawChar                             0x080003b1   Thumb Code    84  lcd.o(i.LCD_DrawChar)
+    LCD_DrawCircle                           0x08000409   Thumb Code   262  lcd.o(i.LCD_DrawCircle)
+    LCD_DrawLine                             0x08000515   Thumb Code    78  lcd.o(i.LCD_DrawLine)
+    LCD_DrawRect                             0x08000569   Thumb Code    64  lcd.o(i.LCD_DrawRect)
+    LCD_Init                                 0x080005a9   Thumb Code    46  lcd.o(i.LCD_Init)
+    LCD_ReadReg                              0x080005dd   Thumb Code   120  lcd.o(i.LCD_ReadReg)
+    LCD_SetBackColor                         0x0800065d   Thumb Code    12  lcd.o(i.LCD_SetBackColor)
+    LCD_SetCursor                            0x0800066d   Thumb Code    24  lcd.o(i.LCD_SetCursor)
+    LCD_SetTextColor                         0x08000685   Thumb Code    12  lcd.o(i.LCD_SetTextColor)
+    LCD_WriteRAM                             0x08000695   Thumb Code    80  lcd.o(i.LCD_WriteRAM)
+    LCD_WriteRAM_Prepare                     0x080006ed   Thumb Code    82  lcd.o(i.LCD_WriteRAM_Prepare)
+    LCD_WriteReg                             0x08000749   Thumb Code   100  lcd.o(i.LCD_WriteReg)
+    LL_GPIO_Init                             0x080007e5   Thumb Code   306  stm32g4xx_ll_gpio.o(i.LL_GPIO_Init)
+    LL_Init1msTick                           0x08000917   Thumb Code    26  stm32g4xx_ll_utils.o(i.LL_Init1msTick)
+    LL_SetSystemCoreClock                    0x08000931   Thumb Code     6  stm32g4xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    LL_mDelay                                0x0800093d   Thumb Code    30  stm32g4xx_ll_utils.o(i.LL_mDelay)
+    MemManage_Handler                        0x08000b89   Thumb Code     2  stm32g4xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08000b8b   Thumb Code     2  stm32g4xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08000b8d   Thumb Code     2  stm32g4xx_it.o(i.PendSV_Handler)
+    REG_8230_Init                            0x08000b8f   Thumb Code   274  lcd.o(i.REG_8230_Init)
+    REG_932X_Init                            0x08000ca1   Thumb Code   514  lcd.o(i.REG_932X_Init)
+    SVC_Handler                              0x08000ea3   Thumb Code     2  stm32g4xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08000ea5   Thumb Code     2  stm32g4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08000ea9   Thumb Code   164  main.o(i.SystemClock_Config)
+    SystemInit                               0x08000f61   Thumb Code    22  system_stm32g4xx.o(i.SystemInit)
+    UsageFault_Handler                       0x08000f7d   Thumb Code     2  stm32g4xx_it.o(i.UsageFault_Handler)
+    __scatterload_copy                       0x08000f7f   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000f8d   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000f8f   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x08000f9d   Thumb Code   356  main.o(i.main)
+    ASCII_Table                              0x0800113c   Data        4560  lcd.o(.constdata)
+    Region$$Table$$Base                      0x0800230c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800232c   Number         0  anon$$obj.o(Region$$Table)
+    dummy                                    0x20000004   Data           2  lcd.o(.data)
+    SystemCoreClock                          0x20000008   Data           4  system_stm32g4xx.o(.data)
+    __initial_sp                             0x20000410   Data           0  startup_stm32g431xx.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080001d9
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002338, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000232c, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000001d8   Data   RO          214    RESET               startup_stm32g431xx.o
+    0x080001d8   0x080001d8   0x00000000   Code   RO          677  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001d8   0x080001d8   0x00000004   Code   RO          682    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001dc   0x080001dc   0x00000004   Code   RO          685    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          687    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          689    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001e0   0x080001e0   0x00000008   Code   RO          690    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001e8   0x080001e8   0x00000000   Code   RO          692    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001e8   0x080001e8   0x00000000   Code   RO          694    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001e8   0x080001e8   0x00000004   Code   RO          683    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001ec   0x080001ec   0x00000024   Code   RO          215    .text               startup_stm32g431xx.o
+    0x08000210   0x08000210   0x00000024   Code   RO          680    .text               mc_w.l(memseta.o)
+    0x08000234   0x08000234   0x00000024   Code   RO          696    .text               mc_w.l(init.o)
+    0x08000258   0x08000258   0x00000002   Code   RO          121    i.BusFault_Handler  stm32g4xx_it.o
+    0x0800025a   0x0800025a   0x00000002   Code   RO          122    i.DebugMon_Handler  stm32g4xx_it.o
+    0x0800025c   0x0800025c   0x0000001c   Code   RO          222    i.Delay_LCD         lcd.o
+    0x08000278   0x08000278   0x00000002   Code   RO          123    i.HardFault_Handler  stm32g4xx_it.o
+    0x0800027a   0x0800027a   0x00000002   PAD
+    0x0800027c   0x0800027c   0x0000002c   Code   RO          223    i.LCD_BusIn         lcd.o
+    0x080002a8   0x080002a8   0x00000030   Code   RO          224    i.LCD_BusOut        lcd.o
+    0x080002d8   0x080002d8   0x00000024   Code   RO          225    i.LCD_Clear         lcd.o
+    0x080002fc   0x080002fc   0x00000070   Code   RO          227    i.LCD_CtrlLinesConfig  lcd.o
+    0x0800036c   0x0800036c   0x00000018   Code   RO          228    i.LCD_DisplayChar   lcd.o
+    0x08000384   0x08000384   0x0000002a   Code   RO          231    i.LCD_DisplayStringLine  lcd.o
+    0x080003ae   0x080003ae   0x00000002   PAD
+    0x080003b0   0x080003b0   0x00000058   Code   RO          232    i.LCD_DrawChar      lcd.o
+    0x08000408   0x08000408   0x0000010c   Code   RO          233    i.LCD_DrawCircle    lcd.o
+    0x08000514   0x08000514   0x00000054   Code   RO          234    i.LCD_DrawLine      lcd.o
+    0x08000568   0x08000568   0x00000040   Code   RO          237    i.LCD_DrawRect      lcd.o
+    0x080005a8   0x080005a8   0x00000034   Code   RO          238    i.LCD_Init          lcd.o
+    0x080005dc   0x080005dc   0x00000080   Code   RO          241    i.LCD_ReadReg       lcd.o
+    0x0800065c   0x0800065c   0x00000010   Code   RO          242    i.LCD_SetBackColor  lcd.o
+    0x0800066c   0x0800066c   0x00000018   Code   RO          243    i.LCD_SetCursor     lcd.o
+    0x08000684   0x08000684   0x00000010   Code   RO          245    i.LCD_SetTextColor  lcd.o
+    0x08000694   0x08000694   0x00000058   Code   RO          248    i.LCD_WriteRAM      lcd.o
+    0x080006ec   0x080006ec   0x0000005c   Code   RO          249    i.LCD_WriteRAM_Prepare  lcd.o
+    0x08000748   0x08000748   0x0000006c   Code   RO          250    i.LCD_WriteReg      lcd.o
+    0x080007b4   0x080007b4   0x00000018   Code   RO            5    i.LL_AHB2_GRP1_EnableClock  main.o
+    0x080007cc   0x080007cc   0x00000018   Code   RO          251    i.LL_AHB2_GRP1_EnableClock  lcd.o
+    0x080007e4   0x080007e4   0x00000132   Code   RO          566    i.LL_GPIO_Init      stm32g4xx_ll_gpio.o
+    0x08000916   0x08000916   0x0000001a   Code   RO          436    i.LL_Init1msTick    stm32g4xx_ll_utils.o
+    0x08000930   0x08000930   0x0000000c   Code   RO          442    i.LL_SetSystemCoreClock  stm32g4xx_ll_utils.o
+    0x0800093c   0x0800093c   0x0000001e   Code   RO          443    i.LL_mDelay         stm32g4xx_ll_utils.o
+    0x0800095a   0x0800095a   0x00000002   PAD
+    0x0800095c   0x0800095c   0x0000022c   Code   RO            6    i.MX_GPIO_Init      main.o
+    0x08000b88   0x08000b88   0x00000002   Code   RO          124    i.MemManage_Handler  stm32g4xx_it.o
+    0x08000b8a   0x08000b8a   0x00000002   Code   RO          125    i.NMI_Handler       stm32g4xx_it.o
+    0x08000b8c   0x08000b8c   0x00000002   Code   RO          126    i.PendSV_Handler    stm32g4xx_it.o
+    0x08000b8e   0x08000b8e   0x00000112   Code   RO          252    i.REG_8230_Init     lcd.o
+    0x08000ca0   0x08000ca0   0x00000202   Code   RO          253    i.REG_932X_Init     lcd.o
+    0x08000ea2   0x08000ea2   0x00000002   Code   RO          127    i.SVC_Handler       stm32g4xx_it.o
+    0x08000ea4   0x08000ea4   0x00000002   Code   RO          128    i.SysTick_Handler   stm32g4xx_it.o
+    0x08000ea6   0x08000ea6   0x00000002   PAD
+    0x08000ea8   0x08000ea8   0x000000b8   Code   RO            7    i.SystemClock_Config  main.o
+    0x08000f60   0x08000f60   0x0000001c   Code   RO          643    i.SystemInit        system_stm32g4xx.o
+    0x08000f7c   0x08000f7c   0x00000002   Code   RO          129    i.UsageFault_Handler  stm32g4xx_it.o
+    0x08000f7e   0x08000f7e   0x0000000e   Code   RO          700    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000f8c   0x08000f8c   0x00000002   Code   RO          701    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000f8e   0x08000f8e   0x0000000e   Code   RO          702    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000f9c   0x08000f9c   0x000001a0   Code   RO            8    i.main              main.o
+    0x0800113c   0x0800113c   0x000011d0   Data   RO          254    .constdata          lcd.o
+    0x0800230c   0x0800230c   0x00000020   Data   RO          698    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800232c, Size: 0x00000410, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0800232c   0x00000006   Data   RW          255    .data               lcd.o
+    0x20000006   0x08002332   0x00000002   PAD
+    0x20000008   0x08002334   0x00000004   Data   RW          646    .data               system_stm32g4xx.o
+    0x2000000c   0x08002338   0x00000004   PAD
+    0x20000010        -       0x00000400   Zero   RW          212    STACK               startup_stm32g431xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2174         88       4560          6          0      22433   lcd.o
+      1180         94          0          0          0     542143   main.o
+        36          8        472          0       1024        884   startup_stm32g431xx.o
+        18          0          0          0          0       9394   stm32g4xx_it.o
+       306          0          0          0          0       7735   stm32g4xx_ll_gpio.o
+        68          6          0          0          0       8025   stm32g4xx_ll_utils.o
+        28          6          0          4          0       1467   system_stm32g4xx.o
+
+    ----------------------------------------------------------------------
+      3818        202       5064         12       1028     592081   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         8          0          0          2          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0        108   memseta.o
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        176   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       122         16          0          0          0        176   mc_w.l
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        176   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3940        218       5064         12       1028     589061   Grand Totals
+      3940        218       5064         12       1028     589061   ELF Image Totals
+      3940        218       5064         12          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 9004 (   8.79kB)
+    Total RW  Size (RW Data + ZI Data)              1040 (   1.02kB)
+    Total ROM Size (Code + RO Data + RW Data)       9016 (   8.80kB)
+
+==============================================================================
+
