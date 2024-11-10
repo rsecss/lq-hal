@@ -1,0 +1,132 @@
+Dependencies for Project 'LL_06_LCD', Target 'LL_06_LCD': (DO NOT MODIFY !)
+F (../Src/main.c)(0x606BF8C9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\main.o --omf_browse ll_06_lcd\main.crf --depend ll_06_lcd\main.d)
+I (../Inc/main.h)(0x5FF2A9BE)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x5FEAD578)
+I (../Inc/lcd.h)(0x5FEBE1C3)
+F (../Src/stm32g4xx_it.c)(0x5FF2A929)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\stm32g4xx_it.o --omf_browse ll_06_lcd\stm32g4xx_it.crf --depend ll_06_lcd\stm32g4xx_it.d)
+I (../Inc/main.h)(0x5FF2A9BE)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x5FEAD578)
+I (../Inc/lcd.h)(0x5FEBE1C3)
+I (../Inc/stm32g4xx_it.h)(0x5FF2A929)
+F (.\startup_stm32g431xx.s)(0x5FF2A92E)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "STM32G431xx SETA 1"--list startup_stm32g431xx.lst --xref -o ll_06_lcd\startup_stm32g431xx.o --depend ll_06_lcd\startup_stm32g431xx.d)
+F (..\Src\lcd.c)(0x5FEBF1B2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\lcd.o --omf_browse ll_06_lcd\lcd.crf --depend ll_06_lcd\lcd.d)
+I (../Inc/lcd.h)(0x5FEBE1C3)
+I (../Inc/main.h)(0x5FF2A9BE)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x5FEAD578)
+I (../Inc/fonts.h)(0x5FEBE0AA)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c)(0x5FEAD578)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\stm32g4xx_ll_utils.o --omf_browse ll_06_lcd\stm32g4xx_ll_utils.crf --depend ll_06_lcd\stm32g4xx_ll_utils.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h)(0x5FEAD578)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h)(0x5FEAD578)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c)(0x5FEAD578)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\stm32g4xx_ll_exti.o --omf_browse ll_06_lcd\stm32g4xx_ll_exti.crf --depend ll_06_lcd\stm32g4xx_ll_exti.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c)(0x5FEAD578)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\stm32g4xx_ll_gpio.o --omf_browse ll_06_lcd\stm32g4xx_ll_gpio.crf --depend ll_06_lcd\stm32g4xx_ll_gpio.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h)(0x5FEAD578)
+F (../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c)(0x5FEAD578)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\stm32g4xx_ll_pwr.o --omf_browse ll_06_lcd\stm32g4xx_ll_pwr.crf --depend ll_06_lcd\stm32g4xx_ll_pwr.d)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h)(0x5FEAD578)
+F (../Src/system_stm32g4xx.c)(0x5FEAD575)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_LL_06_LCD-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32G431xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE="24000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="0" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G431xx-o ll_06_lcd\system_stm32g4xx.o --omf_browse ll_06_lcd\system_stm32g4xx.crf --depend ll_06_lcd\system_stm32g4xx.d)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h)(0x5FEAD574)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5FEAD578)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FEAD578)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x5FEAD574)
