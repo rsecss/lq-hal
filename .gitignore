@@ -1,0 +1,8 @@
+# vscode
+.vscode*
+
+# Project
+Template/MDK-ARM/DebugConfig
+
+# My Config
+!.gitignore
