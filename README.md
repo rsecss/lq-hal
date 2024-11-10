@@ -4,7 +4,7 @@
 
 本项目是主要是是为了备战嵌入式蓝桥杯比赛而创建的模板同时不断进行优化，目前官方采用的是 **CT117E-M4** 嵌入式平台，该平台采用的主控芯片是 **STM32G431RBT6**，同时采用 HAL 框架进行代码的编写，开发方式采用的是 **CubeMX + MDK + VsCode** 进行开发，官方采用的是 **DAP-Link** 进行调试，同时借助官方提供的 LCD 的模板还可以进行打印调试。
 
-## Project Highlights
+## Highlights
 
 - 采用了 **任务调度器**，方便进行多任务的编写
 - 同时项目集中"bsp_system.h"头文件管理各种链接关系。
@@ -14,13 +14,13 @@
 ```txt
 |-- Reference                   # 官方提供的参考资料
 |-- Template                    # 项目工程
-        |-- Core                # 核心层
-        |-- Drivers             # 驱动层
-        |-- MDK-ARM             # MDK 工程文件
-        |-- MyApplication       # 应用层
-        |-- Template-Cubex      # CubeMX 工程文件
-        |-- keilkill.bat        # 批处理文件
-    |-- Tools                   # 工具软件
+    |-- Core                    # 核心层
+    |-- Drivers                 # 驱动层
+    |-- MDK-ARM                 # MDK 工程文件
+    |-- MyApplication           # 应用层
+    |-- Template-Cubex          # CubeMX 工程文件
+    |-- keilkill.bat            # 批处理文件
+|-- Tools                       # 工具软件
 ```
 
 ## Usage
@@ -36,10 +36,10 @@
 5. CubeMX 中的 Code Generator（生成选项卡）中勾选 `Add necessary library files as reference in the project`和`Generate peripheral initialization as a pair of'.c/.h'files per peripheral`
 6. 进入 keil 中 首先取消勾选 `Manage Run-Time Environment` 中的 CMSIS，原因是后面添加文件可能会导致编译失败。
 7. 注意查看 Keil 的版本，如果版本过低，可能会导致无法打开工程。
-8. keil 中需要安装主控芯片的固件包-Keil.STM32G4xx_DFP.1.2.0.pack，否则无法编译。
+8. keil 中需要安装主控芯片的固件包-Keil.STM32G4xx_DFP.1.2.0.pack，否则编译失败。
 9. 如果出现程序下载卡死或者无法下载，应该首先查看 target 下的**微库（MicroLIB）**是否勾选，如果没有勾选，请勾选，然后重新编译。）是否勾选，如果这里勾选了然后再检查其他的配置是否正确。
 10. 需要进入 C/C++ 设置界面下面的 Optimization 选择 `Level 0`，同时在 includepath 栏加入头文件路径 `.\MyApplication`,否则无法识别头文件。
-11. 在 Debug 设置界面，仿真器选择 **`CMSIS-DAP Debugger`**，同时在旁边的设置中选择 Trace 更改时钟频率为 80MHz、选择 Port 为 SW 和选择 Flash Download 勾选上 `Reset and Run` 按钮，方便后续的下载和操作
+11. 在 Debug 设置界面，仿真器选择 **`CMSIS-DAP Debugger`**，同时在旁边的设置中选择 Trace 更改时钟频率为 `80MHz`、选择 Port 为 `SW` 和选择 Flash Download 勾选上 `Reset and Run` 按钮，方便后续的下载和操作
 
 ## Contributions
 
