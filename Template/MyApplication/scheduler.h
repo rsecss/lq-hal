@@ -1,5 +1,5 @@
-#ifndef __SCHEDULER_H
-#define __SCHEDULER_H
+#ifndef __SCHEDULER_H__
+#define __SCHEDULER_H__
 
 #include "bsp_system.h"
 

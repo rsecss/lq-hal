@@ -41,16 +41,13 @@ void key_proc()
     key_up = ~key_val && (key_val ^ key_old);
     key_old = key_val;
 
-    if (key_down != 0)
-    {
-        switch(key_down)
-        {
-            case 1:
-                led_proc1();
-                break;
-            case 2:
-                led_proc2();
-                break;
-        }
-    }
+	if (key_down == 1)
+	{
+		led_disp(0x00);
+	}
+	if (key_down == 2)
+	{
+		led_disp(0xFF);
+	}
+	
 }

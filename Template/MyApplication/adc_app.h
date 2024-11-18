@@ -1,5 +1,5 @@
-#ifndef __ADC_APP_H
-#define __ADC_APP_H
+#ifndef __ADC_APP_H__
+#define __ADC_APP_H__
 
 #include "bsp_system.h"
 
