@@ -1,5 +1,5 @@
-#ifndef __BSP_SYSTEM_H
-#define __BSP_SYSTEM_H
+#ifndef __BSP_SYSTEM_H__
+#define __BSP_SYSTEM_H__
 
 #include "main.h"
 #include "usart.h"

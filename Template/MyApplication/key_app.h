@@ -1,5 +1,5 @@
-#ifndef __KEY_APP_H
-#define __KEY_APP_H
+#ifndef __KEY_APP_H__
+#define __KEY_APP_H__
 
 #include "bsp_system.h"
 
