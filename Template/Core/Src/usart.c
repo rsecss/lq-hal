@@ -21,8 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-#include "bsp_system.h"
-#include "string.h"
+#include <string.h>
 typedef struct __FILE FILE;
 
 uint16_t uart_rx_index = 0;
@@ -171,7 +170,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
 /* USER CODE BEGIN 1 */
 /**
- * @brief       该函数用于打印字符到串口，方便调�?
+ * @brief       该函数用于打印字符到串口（重定向�?
  * 
  * @param       ch: 要打印的字符
  * @param       str: 暂未使用
