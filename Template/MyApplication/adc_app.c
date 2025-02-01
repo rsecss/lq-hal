@@ -1,17 +1,17 @@
-#include "adc_app.h"
+#include "main.h"
 
-uint32_t adc_dma_buffer[2][50];
-float adc_value[2];
+uint32_t adc_dma_buffer[2][50] = {0};
+float adc_value[2] = {0.0};
 
 /**
  * @brief       ADC 转换调度函数
+ * 
  * @param       无
  * @retval      无
  */
 void adc_proc()
 {
-    for (uint8_t i = 0; i < 50; i++)
-    {
+    for (uint8_t i = 0; i < 50; i++) {
         adc_value[0] += (float)adc_dma_buffer[0][i];
         adc_value[1] += (float)adc_dma_buffer[1][i];
     }
