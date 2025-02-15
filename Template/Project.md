@@ -4,7 +4,7 @@
 
 该模板主要包含了几个模块：
 
-1. 静态调度器模块 
+1. 静态调度器模块
 2. LED 模块
 3. 按键模块
 4. LCD 模块
@@ -12,7 +12,7 @@
 6. ADC 模块（包含 DMA）
 7. IIC 模块
 8. RTC 模块
-9.  PWM 模块
+9. PWM 模块
 10. 输入捕获模块
 
 ## 框架结构图
@@ -25,6 +25,7 @@ graph BT
     %% 定义功能模块的内容
     subgraph 功能模块
         direction TB
+        A0(系统初始化模块) --system.h-->B 
         A1(LED 模块) --led_app.h----> B
         A2(按键模块) --key_app.h--> B
         A3(LCD 模块) --lcd_app.h----> B
@@ -36,15 +37,15 @@ graph BT
         A9(输入捕获模块) --tim_app.h----> B
 
         A31(lcd.h) --> A3
-        A32(bsp_system.h) --> A3
         A41(usart.h) --> A4
     end
-    
-    B ==> C(调度器模块)
-    C ==scheduler.h===> D(main.c)
-    E(bsp_system.h) -.-> D(main.c)
+    subgraph 应用层
+    direction TB
+        B --scheduler.h--> C(调度器模块)
 
-    style 功能模块 stroke:#333,stroke-width:2px,rx:10,ry:10
+    end
+
+    C ==> D(main.c)
 ```
 
 ## 资源及引脚分配
