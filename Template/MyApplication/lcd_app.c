@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include "lcd.h"
-#include "bsp_system.h"
+#include "lcd_app.h"
 
 /* 底层 */
 /**
@@ -34,7 +31,7 @@ static void lcd_sprintf(uint8_t line, char *format, ...)
 void lcd_proc()
 {
     static uint32_t count = 0;
-    lcd_sprintf(Line0, "Test LCD!!!");
+    lcd_sprintf(Line0, "UART!!!");
     lcd_sprintf(Line1, "Count:%d", count++);
     lcd_sprintf(Line2, "ADC1:%.3f", adc_value[0]);
     lcd_sprintf(Line3, "ADC2:%.3f", adc_value[1]);

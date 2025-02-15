@@ -1,5 +1,4 @@
-#include "main.h"
-#include "led_app.h"
+#include "system.h"
 void system_init()
 {
     led_proc2();

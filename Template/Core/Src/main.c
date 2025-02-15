@@ -26,7 +26,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_system.h"
-#include "scheduler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,7 +94,7 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
-  LCD_Init();               /* LCD初始化 */
+  LCD_Init();               /* LCD初始�? */
   LCD_Clear(Blue);          /* 清屏 */
   LCD_SetTextColor(White);  /* 文字颜色 */
   LCD_SetBackColor(Blue);   /* 背景颜色 */
@@ -103,7 +102,7 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50);
   
-  system_init();            /* 系统初始化 */
+  system_init();            /* 系统初始�? */
   scheduler_init();         /* 调度器初始化 */
   /* USER CODE END 2 */
 
@@ -114,7 +113,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    scheduler_run();      /* 调度器运行 */
+    scheduler_run();      /* 调度器运�? */
   }
   /* USER CODE END 3 */
 }

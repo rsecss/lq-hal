@@ -1,4 +1,4 @@
-#include "main.h"
+#include "adc_app.h"
 
 uint32_t adc_dma_buffer[2][50] = {0};
 float adc_value[2] = {0.0};

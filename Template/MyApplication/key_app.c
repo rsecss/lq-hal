@@ -1,5 +1,4 @@
-#include "main.h"
-#include "led_app.h"
+#include "key_app.h"
 
 static uint8_t key_val = 0;        /* 当前按键状态 */
 static uint8_t key_old = 0;        /* 上一次按键状态 */

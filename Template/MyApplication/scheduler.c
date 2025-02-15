@@ -1,5 +1,4 @@
-#include "main.h"
-#include "bsp_system.h"
+#include "scheduler.h"
 
 uint8_t task_number = 0;           /* 全局变量，用于存储用户任务数量 */
 

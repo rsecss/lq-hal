@@ -1,4 +1,4 @@
-#include "main.h"
+#include "led_app.h"
 
 static const uint8_t LED_ON = 0xFF;     /* 0xFF 表示全亮 */
 static const uint8_t LED_OFF = 0x00;    /* 0x00 表示全灭 */
