@@ -18,6 +18,8 @@ static void led_display(uint8_t led)
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 |
                     GPIO_PIN_11 | GPIO_PIN_12 | GPIO_PIN_13 |
                     GPIO_PIN_14 |GPIO_PIN_15, GPIO_PIN_SET);
+    // HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
+    // HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET);
 
     /* 根据 ucLed 的值点亮相应的灯 */
     HAL_GPIO_WritePin(GPIOC, (uint16_t)(led << LED_PIN_SHIFT), GPIO_PIN_RESET);
