@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include "lcd.h"
-#include "bsp_system.h"
+#include "lcd_app.h"
 
 /* 底层 */
 /**
@@ -26,6 +23,17 @@ static void lcd_sprintf(uint8_t line, char *format, ...)
 }
 
 /* 逻辑层 */
+/* 自定义星期映射数组 */
+const uint8_t *weekdays[] = {
+    "ERROR"
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+};
 /**
  * @brief       lcd 测试程序
  * @param       无
@@ -34,8 +42,12 @@ static void lcd_sprintf(uint8_t line, char *format, ...)
 void lcd_proc()
 {
     static uint32_t count = 0;
-    lcd_sprintf(Line0, "Test LCD!!!");
+    lcd_sprintf(Line0, "UART!!!");
     lcd_sprintf(Line1, "Count:%d", count++);
     lcd_sprintf(Line2, "ADC1:%.3f", adc_value[0]);
     lcd_sprintf(Line3, "ADC2:%.3f", adc_value[1]);
+    lcd_sprintf(Line4, "TIME:%02d:%02d:%02d", time.Hours, time.Minutes, time.Seconds);
+    lcd_sprintf(Line5, "Date:%04d-%02d-%02d", 2000 + date.Year, date.Month, date.Date);
+    lcd_sprintf(Line6, "Week:%s", weekdays[date.WeekDay]);
+    lcd_sprintf(Line7, "TIM_IC_VAL:%d", tim_ic_val);
 }

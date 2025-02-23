@@ -1,7 +1,4 @@
-#include <string.h>
-#include "main.h"
-#include "usart.h"
-
+#include "usart_app.h"
 
 /**
  * @brief       中断回调函数
@@ -29,6 +26,7 @@ void uart_proc()
     if (uart_rx_index == 0)
         return;   /* 如果接收索引为 0，说明没有数据需要处理，直接返回 */
     if (HAL_GetTick() - uart_rx_ticks > 100) {
+        printf("uart data: %s\n", uart_rx_buffer);
         memset(uart_rx_buffer, 0, uart_rx_index);   /* 清空缓冲区 */
         uart_rx_index = 0;                          /* 重置索引 */
         huart1.pRxBuffPtr = uart_rx_buffer;         /* 将缓存区指针重置成初始位置 */

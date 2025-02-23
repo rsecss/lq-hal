@@ -20,13 +20,14 @@
 #include "main.h"
 #include "adc.h"
 #include "dma.h"
+#include "rtc.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_system.h"
-#include "scheduler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,17 +95,24 @@ int main(void)
   MX_USART1_UART_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
+  MX_RTC_Init();
+  MX_TIM16_Init();
+  MX_TIM17_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  LCD_Init();               /* LCD初始化 */
-  LCD_Clear(Blue);          /* 清屏 */
-  LCD_SetTextColor(White);  /* 文字颜色 */
-  LCD_SetBackColor(Blue);   /* 背景颜色 */
+  system_init();              // 系统初始�???
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50);
-  
-  system_init();            /* 系统初始化 */
-  scheduler_init();         /* 调度器初始化 */
+  HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,tim_ic_buffer,64);
+  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
+
+  LCD_Init();                 // LCD 初始�???
+  LCD_Clear(Blue);            // 清屏
+  LCD_SetTextColor(White);    // 文字颜色-白色
+  LCD_SetBackColor(Blue);     // 背景颜色-蓝色
+  scheduler_init();           // 调度器初始化
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,7 +122,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    scheduler_run();      /* 调度器运行 */
+    scheduler_run();           // 调度器运�???
   }
   /* USER CODE END 3 */
 }

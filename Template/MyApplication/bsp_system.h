@@ -5,13 +5,41 @@
 extern "C" {
 #endif
 
-/* 应用层模块头文件 */
-#include "lcd.h"
+/* 头文件 */
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
+
+/* 应用层头文件 */
+#include "main.h"
+#include "usart.h"
+#include "rtc.h"
+#include "tim.h"
+
+#include "system.h"
+#include "filter.h"
+#include "scheduler.h"
 #include "led_app.h"        /* led 相关的函数 */
 #include "key_app.h"        /* 四行代码版本 */
+#include "lcd.h"
 #include "lcd_app.h"        /* lcd 相关的函数 */
 #include "usart_app.h"      /* 串口中断 + 超时解析 */
 #include "adc_app.h"        /* adc 相关的函数 */
+#include "i2c_hal.h"        /* iic 相关的函数 */
+#include "rtc_app.h"        /* rtc 相关的函数 */
+#include "tim_app.h"        /* 定时器相关的函数 */
+
+
+/* 全局变量，数组声明 */
+extern uint16_t uart_rx_index;          // 串口接收索引
+extern uint32_t uart_rx_ticks;          // 串口接收缓存时间戳
+extern uint8_t uart_rx_buffer[128];     // 串口接收缓存
+extern uint32_t adc_dma_buffer[2][50];  // DMA 接受缓存
+extern float adc_value[2];              // ADC 采样值数组
+extern RTC_TimeTypeDef time;            // 定义时间结构体
+extern RTC_DateTypeDef date;            // 定义日期结构体
+extern uint32_t tim_ic_buffer[64];      // 定义存储输入捕获值的缓冲区
+extern uint32_t tim_ic_val;             // 最终计算得到的输入捕获值
 
 #ifdef __cplusplus
 }
