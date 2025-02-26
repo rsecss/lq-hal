@@ -44,27 +44,5 @@ void key_proc()
     key_up = ~key_val & (key_val ^ key_old);
     key_old = key_val;
 
-    if (key_down != 0) {
-        switch (key_down) {
-            case 1:
-                led_proc1();
-                break;
-            case 2:
-                led_proc2();
-                break;
-            case 3:
-                led_status ^= 1;
-                if (led_status) {
-                    led_proc3();
-                } else {
-                    led_proc4();
-                }
-                break;
-            case 4:
-                led_proc5();
-                break;
-            default:
-                break;
-        }
-    }
+    
 }

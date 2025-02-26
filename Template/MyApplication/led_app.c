@@ -1,9 +1,6 @@
 #include "led_app.h"
 
-static const uint8_t LED_ON = 0xFF;     /* 0xFF 表示全亮 */
 static const uint8_t LED_OFF = 0x00;    /* 0x00 表示全灭 */
-static const uint8_t LED_ODD = 0xAA;    /* 0xAA 表示奇数位置亮 */
-static const uint8_t LED_EVEN = 0x55;   /* 0x55 表示偶数位置亮 */
 static const uint8_t LED_PIN_SHIFT = 0x08;
 
 /* 底层 */
@@ -27,33 +24,23 @@ static void led_display(uint8_t led)
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET);
 }
 
-/* 逻辑层 */
-void led_proc1()
+/**
+ * @brief       LED 控制函数
+ * 
+ * @note        zh这里通过位操作合并所有条件的结果，最后统一调用一次led_display()，否则多次直接调用会出现 LED 状态覆盖问题，但是可以通过修改 led_display 函数的方式解决。
+ * @param       无
+ * @retval      无
+ */
+void led_proc()
 {
-    led_display(LED_ON);
-}
+    uint8_t led_state = LED_OFF;
 
-void led_proc2()
-{
-    led_display(LED_OFF);
-}
+    /* 根据条件判断来点亮哪一个灯 */
+    
+    // if (条件)
+    // {
+    //     led_state |= 0x01;
+    // }
 
-void led_proc3()
-{
-    led_display(LED_ODD);
-}
-
-void led_proc4()
-{
-    led_display(LED_EVEN);
-}
-
-void led_proc5()
-{
-    static uint8_t led = 0x01;
-
-    for (uint8_t i = 0; i < 8; i++) {
-        led_display(led << i);
-        HAL_Delay(100);
-    }
+    led_display(led_state);
 }

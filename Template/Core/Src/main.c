@@ -100,7 +100,7 @@ int main(void)
   MX_TIM17_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  system_init();              // 系统初始�???
+  system_init();              // 系统初始�???
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50);
   HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50);
@@ -108,10 +108,10 @@ int main(void)
   HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
 
-  LCD_Init();                 // LCD 初始�???
+  LCD_Init();                 // LCD 初始�???
   LCD_Clear(Blue);            // 清屏
   LCD_SetTextColor(White);    // 文字颜色-白色
-  LCD_SetBackColor(Blue);     // 背景颜色-蓝色
+  LCD_SetBackColor(Black);     // 背景颜色-蓝色
   scheduler_init();           // 调度器初始化
   /* USER CODE END 2 */
 
@@ -122,7 +122,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    scheduler_run();           // 调度器运�???
+    scheduler_run();           // 调度器运�???
   }
   /* USER CODE END 3 */
 }
