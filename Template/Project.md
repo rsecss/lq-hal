@@ -50,8 +50,6 @@ graph BT
 
 ## 资源及引脚分配
 
-
-
 ## 模板效果展示
 
 ![4](./Project.assets/4.jpg)

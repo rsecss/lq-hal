@@ -7,11 +7,7 @@
 extern "C" {
 #endif
 
-void led_proc1(void);           /* led 点亮熄灭 */
-void led_proc2(void);           /* led 熄灭点亮 */
-void led_proc3(void);
-void led_proc4(void);
-void led_proc5(void);
+void led_proc(void);           /* led 点亮熄灭 */
 
 #ifdef __cplusplus
 }

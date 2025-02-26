@@ -11,6 +11,9 @@ float adc_value[2] = {0.0};
  */
 void adc_proc()
 {
+    adc_value[0] = 0.0;     // R38
+    adc_value[1] = 0.0;     // R37
+    
     for (uint8_t i = 0; i < 50; i++) {
         adc_value[0] += (float)adc_dma_buffer[0][i];
         adc_value[1] += (float)adc_dma_buffer[1][i];
