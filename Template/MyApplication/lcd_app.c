@@ -24,18 +24,18 @@ static void lcd_sprintf(uint8_t line, char *format, ...)
 
 /* 逻辑层 */
 /* 自定义星期映射数组 */
-const uint8_t *weekdays[] = {
-    "ERROR"
+static const uint8_t *weekdays[8] = {
+    "ERROR",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
+    "Sunday",
 };
 /**
- * @brief       lcd 测试程序
+ * @brief       lcd 测试
  * @param       无
  * @retval      无
  */
