@@ -1,9 +1,8 @@
 # vscode
-.vscode*
+Template/MDK-ARM/.vscode
 
 # Project
 Template/MDK-ARM/DebugConfig
-Template/Template.zip
 
 # My Config
 !.gitignore
