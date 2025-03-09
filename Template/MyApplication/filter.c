@@ -17,10 +17,14 @@
  */
 void limit_filter(uint32_t *data, int32_t size, uint32_t min_value, uint32_t max_value)
 {
-    for (int32_t i = 0; i < size; i++) {
-        if (data[i] < min_value) {
+    for (int32_t i = 0; i < size; i++)
+    {
+        if (data[i] < min_value)
+        {
             data[i] = min_value;
-        } else if (data[i] > max_value) {
+        }
+        else if (data[i] > max_value)
+        {
             data[i] = max_value;
         }
     }
@@ -49,10 +53,11 @@ static int32_t compare(const void *e1, const void *e2)
 uint32_t median_filter(uint32_t *data, int size)
 {
     uint32_t *temp = (uint32_t *)malloc(size * sizeof(uint32_t));   // 申请临时存储空间
+
     memcpy(temp, data, size * sizeof(uint32_t));
     qsort(temp, size, sizeof(uint32_t), compare);
-    uint32_t median = (size % 2 == 0) ? (temp[size / 2 - 1] + temp[size / 2]) / 2 : temp[size / 2]; // 计算中值
-    free(temp);     // 释放临时存储空间
+    uint32_t median = (size % 2 == 0) ? (temp[size / 2 - 1] + temp[size / 2]) / 2 : temp[size / 2];     // 计算中值
+    free(temp);                           // 释放临时存储空间
 
     return median;
 }
@@ -70,7 +75,8 @@ uint32_t average_filter(uint32_t *data, int size)
 {
     uint32_t sum = 0;
 
-    for (int32_t i = 0; i < size; i++) {
+    for (int32_t i = 0; i < size; i++)
+    {
         sum += data[i];
     }
 
