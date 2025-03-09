@@ -19,16 +19,15 @@ extern "C" {
 #include "system.h"
 #include "filter.h"
 #include "scheduler.h"
-#include "led_app.h"        /* led 相关的函数 */
-#include "key_app.h"        /* 四行代码版本 */
-#include "lcd.h"
-#include "lcd_app.h"        /* lcd 相关的函数 */
-#include "usart_app.h"      /* 串口中断 + 超时解析 */
-#include "adc_app.h"        /* adc 相关的函数 */
-#include "i2c_hal.h"        /* iic 相关的函数 */
-#include "rtc_app.h"        /* rtc 相关的函数 */
-#include "tim_app.h"        /* 定时器相关的函数 */
-
+#include "led_app.h"                    // led 相关的函数
+#include "key_app.h"                    // 按键四行代码版本
+#include "lcd.h"                        // lcd 底层驱动（官方提供）
+#include "lcd_app.h"                    // lcd 相关的函数
+#include "usart_app.h"                  // 串口中断 + 超时解析
+#include "adc_app.h"                    // adc 相关的函数
+#include "i2c_hal.h"                    // iic 相关的函数
+#include "rtc_app.h"                    // rtc 相关的函数
+#include "tim_app.h"                    // 定时器相关的函数
 
 /* 全局变量，数组声明 */
 extern uint16_t uart_rx_index;          // 串口接收索引
