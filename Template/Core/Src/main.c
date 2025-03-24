@@ -100,18 +100,19 @@ int main(void)
   MX_TIM17_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  system_init();                // 系统初始化
-
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50);
-  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50);
-  HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,tim_ic_buffer,64);
-  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
+  HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);        // 使能串口接收中断
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);  // ADC1 校准
+  HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);  // ADC2 校准
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1 进行 DMA 采集
+  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50); // ADC2 进行 DMA 采集
+  HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,tim_ic_buffer,64);      // TIM3 进行DMA采集
+  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);               // TIM16 输出PWM
+  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);               // TIM17 输出PWM
 
   LCD_Init();                   // LCD 初始化
   LCD_Clear(Black);             // 清屏
-  LCD_SetTextColor(White);      // 文字颜色-白色
-  LCD_SetBackColor(Black);      // 背景颜色-蓝色
+  LCD_SetTextColor(White);      // 设置输出文本颜色
+  LCD_SetBackColor(Black);      // 设置输出背景颜色
   scheduler_init();             // 调度器初始化
   /* USER CODE END 2 */
 
@@ -122,7 +123,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    scheduler_run();           // 调度器运�???
+    scheduler_run();           // 调度器运�?
   }
   /* USER CODE END 3 */
 }

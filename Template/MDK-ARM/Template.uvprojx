@@ -1187,19 +1187,9 @@
               <FilePath>..\MyApplication\bsp_system.h</FilePath>
             </File>
             <File>
-              <FileName>system.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MyApplication\system.h</FilePath>
-            </File>
-            <File>
               <FileName>scheduler.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\MyApplication\scheduler.h</FilePath>
-            </File>
-            <File>
-              <FileName>system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MyApplication\system.c</FilePath>
             </File>
             <File>
               <FileName>scheduler.c</FileName>
