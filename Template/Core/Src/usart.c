@@ -73,7 +73,7 @@ void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
-  HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);  /* 使能串口接收中断 */
+
   /* USER CODE END USART1_Init 2 */
 
 }
@@ -174,7 +174,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
  * 
  * @param       ch: 要打印的字符
  * @param       str: 暂未使用
- * @return      int: 返回打印的字�?
+ * @return      int: 返回打印的字符串
  */
 int fputc(int ch, MYFILE *str)
 {
