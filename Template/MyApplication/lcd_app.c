@@ -35,7 +35,8 @@ static const uint8_t *weekdays[8] = {
     "Sunday",
 };
 /**
- * @brief       lcd 测试
+ * @brief       lcd 显示处理函数
+ * @note        该函数用于测试 lcd 是否显示，包括显示时间、日期、ADC 值等信息。
  * @param       无
  * @retval      无
  */
@@ -46,8 +47,8 @@ void lcd_proc()
     lcd_sprintf(Line1, "Count:%d", count++);
     lcd_sprintf(Line2, "ADC1:%.3f", adc_value[0]);
     lcd_sprintf(Line3, "ADC2:%.3f", adc_value[1]);
-    lcd_sprintf(Line4, "TIME:%02d:%02d:%02d", time.Hours, time.Minutes, time.Seconds);
-    lcd_sprintf(Line5, "Date:%04d-%02d-%02d", 2000 + date.Year, date.Month, date.Date);
-    lcd_sprintf(Line6, "Week:%s", weekdays[date.WeekDay]);
+    lcd_sprintf(Line4, "TIME:%02d:%02d:%02d", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
+    lcd_sprintf(Line5, "Date:%04d-%02d-%02d", 2000 + rtc_date.Year, rtc_date.Month, rtc_date.Date);
+    lcd_sprintf(Line6, "Week:%s", weekdays[rtc_date.WeekDay]);
     lcd_sprintf(Line7, "TIM_IC_VAL:%d", tim_ic_val);
 }
