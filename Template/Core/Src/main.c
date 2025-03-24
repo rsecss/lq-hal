@@ -103,8 +103,8 @@ int main(void)
   HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);        // 使能串口接收中断
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);  // ADC1 校准
   HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);  // ADC2 校准
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1 进行DMA采集
-  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50); // ADC2 进行DMA采集
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1 进行 DMA 采集
+  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50); // ADC2 进行 DMA 采集
   HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,tim_ic_buffer,64);      // TIM3 进行DMA采集
   HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);               // TIM16 输出PWM
   HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);               // TIM17 输出PWM
