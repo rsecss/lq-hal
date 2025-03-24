@@ -1,6 +1,6 @@
 #include "led_app.h"
 
-static const uint8_t LED_OFF = 0x00;    /* 0x00 表示全灭 */
+static const uint8_t LED_OFF = 0x00;        // 0x00 表示全灭
 static const uint8_t LED_PIN_SHIFT = 0x08;
 
 /* 底层 */
