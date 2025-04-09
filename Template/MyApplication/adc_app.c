@@ -1,25 +1,25 @@
 #include "adc_app.h"
 
 uint32_t adc_dma_buffer[2][50] = {0};
-float adc_value[2] = {0.0};
+float adc_value[2] = {0.0f};
 
 /**
  * @brief       计算 ADC 通道的平均电压值
  * 
  * @param       buffer ADC DMA缓冲区
- * @param       samples 采样点数
- * @retval      float 计算得到的电压值(V)
+ * @param       buffer_size 缓冲区大小
+ * @return      float 计算得到的电压值(V)
  */
-static float calculate_adc_voltage(uint32_t *buffer, uint8_t samples)
+static float calculate_adc_voltage(uint32_t *buffer, uint8_t buffer_size)
 {
-    float sum = 0.0f;
+    float adc_temp = 0.0f;
     
-    for (uint8_t i = 0; i < samples; i++)
+    for (uint8_t i = 0; i < buffer_size; i++)
     {
-        sum += (float)buffer[i];
+        adc_temp += (float)buffer[i];
     }
     
-    return (sum / samples * 3.3f / 4096);
+    return (adc_temp / buffer_size * 3.3f / 4096);
 }
 
 /**

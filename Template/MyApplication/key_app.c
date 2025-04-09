@@ -42,4 +42,6 @@ void key_proc()
     /* 计算松开的按键（当前松开状态与前一状态异或，并与当前状态相与）*/
     key_up = ~key_val & (key_val ^ key_old);
     key_old = key_val;
+
+    
 }

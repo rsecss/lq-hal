@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-void lcd_proc(void);        /* lcd 测试函数 */
+void lcd_proc(void);
 
 #ifdef __cplusplus
 }
