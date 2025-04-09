@@ -1,7 +1,7 @@
 #include "rtc_app.h"
 
-RTC_TimeTypeDef rtc_time = {0};     // 定义时间结构体
-RTC_DateTypeDef rtc_date = {0};     // 定义日期结构体
+RTC_TimeTypeDef rtc_time;     // 定义时间结构体
+RTC_DateTypeDef rtc_date;     // 定义日期结构体
 
 /**
  * @brief   RTC 模块初始化函数

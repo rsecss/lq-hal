@@ -1,5 +1,9 @@
 #include "usart_app.h"
 
+uint16_t uart_rx_index = 0;
+uint32_t uart_rx_ticks = 0;
+uint8_t uart_rx_buffer[128] = {0};
+
 /**
  * @brief       中断回调函数
  * 

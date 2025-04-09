@@ -16,7 +16,7 @@ static task_t scheduler_task[] = {
     {uart_proc, 10, 0},     // UART 任务，周期为 10ms，初始上次运行时间为 0
     {adc_proc, 20, 0},      // ADC 任务，周期为 20ms，初始上次运行时间为 0
     {rtc_proc, 10, 0},      // RTC 任务，周期为 10ms，初始上次运行时间为 0
-    {tim_ic_proc, 50, 0},   // TIM_IC 任务，周期为 100ms，初始上次运行时间为 0
+    {tim_proc, 50, 0},   // TIM_IC 任务，周期为 100ms，初始上次运行时间为 0
 };
 
 /**
