@@ -99,15 +99,17 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM17_Init();
   MX_TIM3_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);        // 使能串口接收中断
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);  // ADC1 校准
   HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);  // ADC2 校准
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1 进行 DMA 采集
-  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50); // ADC2 进行 DMA 采集
-  HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,tim_ic_buffer,64);      // TIM3 进行DMA采集
-  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);               // TIM16 输出PWM
-  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);               // TIM17 输出PWM
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1(PB12-R38) 进行 DMA 采集
+  HAL_ADC_Start_DMA(&hadc2, (uint32_t *)&adc_dma_buffer[1][0], 50); // ADC2(PB15-R37) 进行 DMA 采集
+  HAL_TIM_IC_Start_DMA(&htim2,TIM_CHANNEL_1,&tim_ic_buffer[0][0],64);      // TIM2(PB-R39) 进行DMA采集
+  HAL_TIM_IC_Start_DMA(&htim3,TIM_CHANNEL_1,&tim_ic_buffer[1][0],64);      // TIM3(PA15-R40) 进行DMA采集
+  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);              // TIM16 输出PWM
+  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);              // TIM17 输出PWM
 
   LCD_Init();                   // LCD 初始化
   LCD_Clear(Black);             // 清屏
@@ -123,7 +125,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    scheduler_run();           // 调度器运�?
+    scheduler_run();           // 调度器运行
   }
   /* USER CODE END 3 */
 }

@@ -24,10 +24,6 @@
 #include "bsp_system.h"
 typedef struct __FILE MYFILE;
 
-uint16_t uart_rx_index = 0;
-uint32_t uart_rx_ticks = 0;
-uint8_t uart_rx_buffer[128] = {0};
-
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
