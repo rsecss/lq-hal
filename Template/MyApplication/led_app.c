@@ -18,16 +18,16 @@ static void led_display(uint8_t led)
     // HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
     // HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET);
 
-    /* 根据 ucLed 的值点亮相应的灯 */
+    /* 根据 led 的值点亮相应的灯 */
     HAL_GPIO_WritePin(GPIOC, (uint16_t)(led << LED_PIN_SHIFT), GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET);
 }
 
 /**
- * @brief       LED 控制函数
+ * @brief       LED 调度函数
  * 
- * @note        zh这里通过位操作合并所有条件的结果，最后统一调用一次led_display()，否则多次直接调用会出现 LED 状态覆盖问题，但是可以通过修改 led_display 函数的方式解决。
+ * @note        这里通过位操作合并所有条件的结果，最后统一调用一次 led_display 函数，否则多次直接调用会出现 LED 状态覆盖问题，但是可以通过修改 led_display 函数的方式解决。
  * @param       无
  * @retval      无
  */
@@ -41,6 +41,11 @@ void led_proc()
     // {
     //     led_state |= 0x01;
     // }
+    // else
+    // {
+    //     led_state &= ~0x01;
+    // }
+    
 
     led_display(led_state);
 }
