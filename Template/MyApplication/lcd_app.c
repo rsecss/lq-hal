@@ -14,7 +14,7 @@
  */
 static void lcd_sprintf(uint8_t line, char *format, ...)
 {
-    char string[21] = {0};
+    char string[21];
     va_list arg;
     va_start(arg, format);
     vsprintf(string, format, arg);
@@ -43,12 +43,14 @@ static const uint8_t *weekdays[8] = {
 void lcd_proc()
 {
     static uint32_t count = 0;
-    lcd_sprintf(Line0, "UART!!!");
-    lcd_sprintf(Line1, "Count:%d", count++);
-    lcd_sprintf(Line2, "ADC1:%.3f", adc_value[0]);
-    lcd_sprintf(Line3, "ADC2:%.3f", adc_value[1]);
-    lcd_sprintf(Line4, "TIME:%02d:%02d:%02d", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
-    lcd_sprintf(Line5, "Date:%04d-%02d-%02d", 2000 + rtc_date.Year, rtc_date.Month, rtc_date.Date);
-    lcd_sprintf(Line6, "Week:%s", weekdays[rtc_date.WeekDay]);
-    lcd_sprintf(Line7, "TIM_IC_VAL:%d", tim_ic_val);
+    lcd_sprintf(Line0, "Count:%d", count++);
+    lcd_sprintf(Line1, "ADC1:%.2f", adc_value[0]);
+    lcd_sprintf(Line2, "ADC2:%.2f", adc_value[1]);
+    lcd_sprintf(Line3, "IC1:%d  ", tim_ic_val[0]);
+    lcd_sprintf(Line4, "IC2:%d  ", tim_ic_val[1]);
+    lcd_sprintf(Line5, "DUTY:%.1f", pwm_duty);
+    lcd_sprintf(Line6, "PWM:%d    ", pwm_frequency);
+    lcd_sprintf(Line7, "TIME:%02d:%02d:%02d", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
+    lcd_sprintf(Line8, "Date:%04d-%02d-%02d", 2000 + rtc_date.Year, rtc_date.Month, rtc_date.Date);
+    lcd_sprintf(Line9, "Week:%s", weekdays[rtc_date.WeekDay]);
 }
