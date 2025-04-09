@@ -2,7 +2,8 @@
 
 ## Introduction
 
-本项目是主要是是为了备战嵌入式蓝桥杯比赛而创建的模板同时不断进行优化，目前官方采用的是 **CT117E-M4** 嵌入式平台，该平台采用的主控芯片是 **STM32G431RBT6**，同时采用 **HAL库** 进行代码的编写，开发方式采用的是 **STM32CubeMX + MDK + VsCode** 进行开发，官方采用的是 **DAP-Link** 进行调试，同时可以借助官方提供的 **LCD** 的底层**API** 进行打印调试。
+本项目是主要是是为了备战嵌入式蓝桥杯比赛而创建的模板同时不断进行优化，目前官方采用的是 **CT117E-M4** 嵌入式平台，该平台采用的主控芯片是 **STM32G431RBT6**，同时采用 **HAL 库** 进行代码的编写，开发方式采用的是 **STM32CubeMX + MDK + VsCode** 进行开发，官方采用的是 **DAP-Link** 进行调试，同时可以借助官方提供的 **LCD** 的底层 **API** 进行打印调试。
+> 如果需要相关真题参考代码，可前往 **[蓝桥杯真题参考代码](https://github.com/rsecss/lq-embedded-solutions)** 查看
 
 ## Highlights
 
@@ -43,7 +44,7 @@
 2. CubeMX 中这里 SYS 不需要配置是因为开发平台自带调试器，可以不用选择 Debug，而在其他平台则一般选择采用 `Serial Wire Debug`，否则可能无法调试和烧录。
 3. CubeMX 中的 NVIC 中配置系统滴答定时器要配置成最高优先级（0），防止频繁被其他任务抢占导致计时精度下降或者系统响应延迟。
 4. CubeMX 中的晶振选择 `24MHz`，时钟树选择配置为 `HSI`，同时配置为 `80MHz`。
-5. CubeMX 中的 IDE 选择 `MDK-ARM` ，同时工程配置包的选择不能使用最新的，因为官方只给了 1.40 和 1.20 的固件配置包
+5. CubeMX 中的 IDE 选择 `MDK-ARM` ，同时工程配置包的选择不能使用最新的，因为官方只给了 1.40 和 1.60 的固件配置包
 6. CubeMX 中的 Code Generator（生成选项卡）中勾选 `Add necessary library files as reference in the project` 和 `Generate peripheral initialization as a pair of'.c/.h'files per peripheral`
 7. 进入 keil 中 首先取消勾选 `Manage Run-Time Environment` 中的 CMSIS，原因是后面添加文件可能会导致编译失败。
 8. 注意查看 Keil 的版本，如果版本过低，可能会无法打开工程。
