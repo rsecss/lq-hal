@@ -7,7 +7,8 @@
 extern "C" {
 #endif
 
-void key_proc(void);        /* 按键调度函数 */
+void key_proc(void);
+//void key_state_proc(void);
 
 #ifdef __cplusplus
 }

@@ -16,7 +16,6 @@
 |-- Reference/                      # 参考资料
     |-- Individual                  # 个人整理的资料
     |-- LQ                          # 蓝桥杯（电子类）历届真题
-    |-- Official                    # 官方提供的参考资料
 |-- Template/                       # 项目工程
     |-- .vscode                     # VSCode 工程配置文件
     |-- Core                        # 核心层
@@ -30,13 +29,16 @@
     |-- ARMCC                       # AC5 工具链
     |-- STM32G4xx_DFP.1.4.0         # 主控芯片固件包
     |-- USB Driver                  # USB 驱动程序
-    |-- Serial Port Assistants      # 串口调试助手
 
 ```
 
 ## Usage
 
-直接 clone 项目到本地，然后打开 MDK -ARM 文件下的工程文件进行编译调试即可。
+以下是如何下载和使用这些参考代码的步骤：
+
+- 访问 GitHub 仓库：[lq-hal](https://github.com/rsecss/lq-hal)
+- 通过 git clone 克隆仓库，或者前往 Releases 界面下载 `Template_v2.0.zip(只包含模板)` 文件
+- 打开参考代码下的 MDK -ARM 文件下 keil 的工程文件然后进行赛题代码的编写即可
 
 **注意事项：**
 

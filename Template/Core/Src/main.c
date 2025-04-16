@@ -101,7 +101,13 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);        // 使能串口接收中断
+  ringbuffer_init(&usart_rb);
+  /* 串口中断 + 超时解析 */
+  // HAL_UART_Receive_IT(&huart1, uart_rx_buffer, 1);        // 使能串口接收中断
+  /* DMA + Ringbuffer */
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, uart_rx_dma_buffer, sizeof(uart_rx_dma_buffer));
+  __HAL_DMA_DISABLE_IT(&hdma_usart1_rx ,DMA_IT_HT);       // 禁用半传输中断（可以不关闭）
+  
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);  // ADC1 校准
   HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);  // ADC2 校准
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_dma_buffer[0][0], 50); // ADC1(PB12-R38) 进行 DMA 采集

@@ -7,8 +7,8 @@
 extern "C" {
 #endif
 
-void pwm_set_duty(float duty, uint8_t tim_x);
-void pwm_set_frequency(int frequency, uint8_t tim_x);
+void pwm_set_duty(uint8_t tim_x, float duty);
+void pwm_set_frequency(uint8_t tim_x,uint32_t frequency);
 void tim_proc(void);
 
 #ifdef __cplusplus

@@ -2,7 +2,8 @@
 
 uint8_t task_number = 0;        // 全局变量，用于存储用户任务数量
 
-typedef struct {
+typedef struct
+{
     void (*task_func)(void);    // 任务函数
     uint32_t period_ms;         // 任务执行周期（ms）
     uint32_t last_run_time;     // 上次执行时间（ms）
