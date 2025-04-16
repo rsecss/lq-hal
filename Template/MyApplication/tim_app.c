@@ -9,7 +9,7 @@
  * @param   tim_x 定时器通道号（16 对应 htim16，17 对应 htim17）
  * @retval  无
  */
-void pwm_set_duty(float duty,uint8_t tim_x)
+void pwm_set_duty(uint8_t tim_x,float duty)
 {
     switch(tim_x)
     {
@@ -30,7 +30,7 @@ void pwm_set_duty(float duty,uint8_t tim_x)
  * @param   frequency 目标频率（Hz）
  * @param   tim_x 定时器通道号（16 对应 htim16，17 对应 htim17）
  */
-void pwm_set_frequency(int frequency, uint8_t tim_x)
+void pwm_set_frequency(uint8_t tim_x, uint32_t frequency)
 {
     /* 考试可以灵活处理直接赋值 */
     // uint32_t clk = 80 * 1000 * 1000; // 80MHz
@@ -56,7 +56,7 @@ void pwm_set_frequency(int frequency, uint8_t tim_x)
     
     switch (tim_x)
     {
-        case 1:
+        case 16:
             /* 保存原占空比 */
             duty = (float)TIM16->CCR1 / (TIM16->ARR + 1);
             
@@ -70,7 +70,7 @@ void pwm_set_frequency(int frequency, uint8_t tim_x)
             /* 更新寄存器 */
             TIM16->EGR = TIM_EGR_UG;
             break;
-        case 2:
+        case 17:
             /* 保存原占空比 */
             duty = (float)TIM17->CCR1 / (TIM17->ARR + 1);
             
@@ -85,7 +85,7 @@ void pwm_set_frequency(int frequency, uint8_t tim_x)
             TIM17->EGR = TIM_EGR_UG;
             break;
         default:
-            printf("Invalid TIM number\r\n");
+            printf("Invalid TIM number\n");
             break;
     }
 }
@@ -131,6 +131,6 @@ void tim_proc()
     /* 将计算得到的频率值限制在 500 到 20000 之间 */
     limit_filter(tim_ic_val, 2, 500, 20000);
  
-    pwm_set_duty(pwm_duty, 16);
-    pwm_set_frequency(pwm_frequency,17);
+    pwm_set_duty(16, pwm_duty);
+    pwm_set_frequency(17,pwm_frequency);
 }
