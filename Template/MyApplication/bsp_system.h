@@ -17,6 +17,7 @@ extern "C" {
 #include "rtc.h"
 #include "tim.h"
 
+#include "ringbuffer.h"
 #include "filter.h"
 #include "scheduler.h"
 #include "led_app.h"                    // led 相关的函数
@@ -30,7 +31,7 @@ extern "C" {
 #include "tim_app.h"                    // 定时器相关的函数
 
 /* 全局变量，数组声明 */
-extern uint8_t uart_rx_buffer[128];     // 串口接收缓存
+extern uint8_t uart_rx_dma_buffer[128]; // DMA 接受缓存区
 extern uint32_t adc_dma_buffer[2][50];  // DMA 接受缓存
 extern float adc_value[2];              // ADC 采样值数组
 extern RTC_TimeTypeDef rtc_time;        // 定义时间结构体
